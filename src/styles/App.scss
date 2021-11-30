@@ -1,0 +1,58 @@
+@import 'setup';
+@import 'main';
+@import 'aside';
+
+html {
+  font-size: 125%;
+  margin: 20px;
+}
+
+.App, .flex {
+  display: flex;
+  width: 100%;
+}
+
+img {
+  max-height: 75vh;
+  // max-width: 50vw;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+  padding: 0;
+}
+
+label,
+li,
+p {
+  font-size: 0.8rem;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.listStyle,
+.listStyle li {
+  list-style: square;
+  margin-left: 10px;
+}
+
+.column {
+  flex-direction: column;
+}
+
+main {
+  width: 60%;
+}
+
+aside {
+  width: 40%;
+}
+
+section {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid red;
+}

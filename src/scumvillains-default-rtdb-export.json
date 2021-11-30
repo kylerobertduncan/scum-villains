@@ -1,0 +1,34 @@
+{
+  "crew" : 0,
+  "designation" : "CF-350 Series Scarab-class Freighter",
+  "gambits" : 2,
+  "hull" : {
+    "improvements" : [ "Smuggling Compartments", "Cargo Hold" ],
+    "value" : 2
+  },
+  "reputation": "",
+  "coloursLook": "",
+  "cred": 0,
+  "debt": 0,
+  "skips": 0,
+  "specialAbilties": {
+    "theGetaway": false,
+    "cargoEye": true,
+    "fieldRepairs": false,
+    "leverage": false,
+    "justPassingThrough": false,
+    "homeCooking": false,
+    "problemSolvers": false,
+    "veteran": false
+  },
+  "shipSize" : {
+    "value" : "Freighter"
+  },
+  "upgrades": {
+    "falseShipPapers": false,
+    "darkHyperspaceLaneMaps": true,
+    "smugglersRigging": false,
+    "luckyCharm": false,
+    "thrillseekers": false
+  }
+}

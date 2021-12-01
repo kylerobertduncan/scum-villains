@@ -1,34 +1,120 @@
 {
-  "crew" : 0,
-  "designation" : "CF-350 Series Scarab-class Freighter",
-  "gambits" : 2,
-  "hull" : {
-    "improvements" : [ "Smuggling Compartments", "Cargo Hold" ],
-    "value" : 2
+  "main": {
+    "crew" : 0,
+    "designation" : "CF-350 Series Scarab-class Freighter",
+    "gambits" : 2,
+    "hull" : {
+      "improvements" : [
+        {
+          "name": "Smuggling Compartments",
+          "value": true
+        },
+        {
+          "name": "Cargo Hold",
+          "value": true
+        }
+      ],
+      "options": [],
+      "max": 4
+    },
+    "reputation": "",
+    "coloursLook": "",
+    "cred": 0,
+    "debt": 0,
+    "skips": 0,
+    "shipSize": {
+      "value": "Freighter"
+    },
+    "engines": {
+      "improvements": [
+        {
+          "name": "Jump Drive",
+          "value": true
+        },
+        {
+          "name": "Afterburners",
+          "value": false
+        }
+      ],
+      "options": [],
+      "max": 4
+    },
+    "comms": {
+      "improvements": [
+        {
+          "name": "Fake Transponder",
+          "value": false
+        },
+        {
+          "name": "Quantum Encryptor",
+          "value": false
+        }
+      ],
+      "options": [],
+      "max": 3
+    },
+    "weapons": {
+      "improvements": [],
+      "options": [],
+      "max": 2
+    },
+    "shields": 1,
+    "notesProjects": [],
+    "upgrades": {
+      "aiModule": false,
+      "armory": false,
+      "brig": false,
+      "galley": true,
+      "medicalBay": false,
+      "scienceBay": false,
+      "shields": false,
+
+      "insight": true,
+      "prowess": false,
+      "resolve": false,
+      "playbook": false,
+
+      "holoEmitters": false,
+      "intruderAlarm": false,
+      "landRover": false,
+      "powerReserves": false,
+      "shuttle": false,
+      "stasisPods": false,
+      "vault": false,
+      
+      "alienPet": false,
+      "landTransport": false,
+      "reconDrone": false,
+      "survivalGear": false,
+      "workshop": true
+    }
   },
-  "reputation": "",
-  "coloursLook": "",
-  "cred": 0,
-  "debt": 0,
-  "skips": 0,
-  "specialAbilties": {
-    "theGetaway": false,
-    "cargoEye": true,
-    "fieldRepairs": false,
-    "leverage": false,
-    "justPassingThrough": false,
-    "homeCooking": false,
-    "problemSolvers": false,
-    "veteran": false
-  },
-  "shipSize" : {
-    "value" : "Freighter"
-  },
-  "upgrades": {
-    "falseShipPapers": false,
-    "darkHyperspaceLaneMaps": true,
-    "smugglersRigging": false,
-    "luckyCharm": false,
-    "thrillseekers": false
+
+  "aside": {
+    "specialAbilties": {
+      "theGetaway": false,
+      "cargoEye": true,
+      "fieldRepairs": false,
+      "leverage": false,
+      "justPassingThrough": false,
+      "homeCooking": false,
+      "problemSolvers": false,
+      "veteran": false
+    },
+    "upgrades": {
+      "falseShipPapers": false,
+      "darkHyperspaceLaneMaps": true,
+      "smugglersRigging": false,
+      "luckyCharm": false,
+      "thrillseekers": false
+    },
+    "contacts": {
+      "tkala": false,
+      "alor": false,
+      "heani": false,
+      "rakka": false,
+      "citani": true
+    },
+    "crewXP": 0
   }
 }

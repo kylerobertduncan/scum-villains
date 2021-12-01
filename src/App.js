@@ -1,23 +1,35 @@
 import './styles/App.scss'
 import Main from './components/Main';
 import Aside from './components/Aside'
-import dbRef from './firebase';
-import { onValue } from 'firebase/database'
-import { useEffect } from 'react';
+import database from './firebase';
+import { onValue, ref } from 'firebase/database';
+import { useEffect, useState } from 'react';
 
 function App() {
 
-  useEffect( () => {
-    onValue(dbRef, (data) => {
-      console.log(data.val());
-    })
-  }, [dbRef])
+  const [ mainData, setMainData ] = useState({});
+  const [ asideData, setAsideData ] = useState({});
 
+  useEffect( () => {
+    const dbRef = ref(database);
+    onValue(dbRef, (data) => {
+      setMainData(data.val().main)
+      setAsideData(data.val().aside)
+    })
+  }, [])
 
   return (
     <div className="App">
-      <Main />
-      <Aside />
+
+      <header className="flex">
+        <h1>Stable Orbit</h1>
+        <p className="smallText">Illicit Merchants, Smugglers, and Blockade Runners</p>
+      </header>
+
+      <div className="flex">
+        <Main main={mainData}/>
+        <Aside aside={asideData}/>
+      </div>
     </div>
   );
 }

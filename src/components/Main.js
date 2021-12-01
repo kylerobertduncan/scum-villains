@@ -1,29 +1,53 @@
-const Main = () => {
+import database from '../firebase';
+import { update, ref } from 'firebase/database';
+
+const Main = ({main}) => {
+
+  // console.log(main);
+
+  const handleChange = (field, value) => {
+    const mainRef = ref(database, '/main')
+    const newData = { ...main };
+    newData[field] = value;
+    return (
+      update(mainRef, newData)
+    )
+  }
+
+  const handleTextChange = (e) => {
+    const fieldName = e.target.name;
+    const newValue = e.target.value;
+    handleChange(fieldName, newValue);
+  }
+
+  const handleValueChange = (e) => {
+    console.log(e.target.name);
+    console.log(e.target.value);
+  }
+
+  if (!main) {
+    return(
+      <p>Please wait, loading . . .</p>
+    )
+  }
+
   return(
     <main>
 
-      <div className="header">
-
-        <h1>Stable Orbit</h1>
-
-        <section className="shipInfo">
-          <form>
-            <div className="flex">
-              <div className="flex column">
-                <input type="text" name="designation" />
-                <label htmlFor="">Designation</label>
-              </div>
-              <div className="flex column">
-                <input type="text" name="reputation" />
-                <label htmlFor="">Crew Reputation</label>
-              </div>
-            </div>
-            <label htmlFor="">Colours/Look</label>
-            <input type="text" name="coloursLook" />
-          </form>
-        </section>
-
-      </div>
+      <section className="shipInfo">
+        <div className="flex">
+          <div className="flex column">
+            <input type="text" name="designation" onChange={handleTextChange} value={main.designation} />
+            <label htmlFor="">Designation</label>
+          </div>
+          <div className="flex column">
+            <input type="text" name="reputation" onChange={handleTextChange} value={main.reputation} />
+            <label htmlFor="">Crew Reputation</label>
+          </div>
+        </div>
+        <label htmlFor="">Colours/Look</label>
+        <input type="text" name="coloursLook" onChange={handleTextChange} value={main.coloursLook} />
+      </section>
 
       <section className="crew">
         <div className="flex">

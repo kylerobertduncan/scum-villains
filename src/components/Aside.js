@@ -2,11 +2,6 @@ const Aside = () => {
   return(
     <aside>
 
-      <div className="asideTitle flex">
-        <h2>Stable Orbit</h2>
-        <p className="smallText">Illicit Merchants, Smugglers, and Blockade Runners</p>
-      </div>
-
       <section className="specialAbilities">
         <h4>Special Abilities</h4>
         <ul>

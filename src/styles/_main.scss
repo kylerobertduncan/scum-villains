@@ -16,6 +16,10 @@ header {
   min-width: 50%;
 }
 
+select[class="grey"] {
+  color: red;
+}
+
 .upgrades {
   display: flex;
   justify-content: space-between;

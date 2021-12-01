@@ -1,5 +1,6 @@
 import BooleanField from './BooleanField';
 import NumberField from './NumberField';
+import SystemField from './SystemField';
 import TextField from './TextField';
 
 const Main = ({main}) => {
@@ -77,6 +78,14 @@ const Main = ({main}) => {
             labelText="Debt"
             name="debt"
             data={main}
+          />
+        </section>
+
+        <section className="engines">
+          <SystemField
+            system={main.engines}
+            dataPath="engines"
+            headerText="Engines"
           />
         </section>
 

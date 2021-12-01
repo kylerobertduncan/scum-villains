@@ -3,7 +3,7 @@ import { update, ref } from 'firebase/database';
 
 const AbilityField = (props) => {
 
-  const { cost, data, dataPath, labelText, name, value } = props;
+  const { cost, data, dataPath, description, labelText, name, value } = props;
 
   const handleChange = (e) => {
     const newData = [...data]
@@ -15,8 +15,8 @@ const AbilityField = (props) => {
     const newDataObj = {
       [dataPath[1]]: newData
     }
-    
-    const dataRef = ref(database, `/main/${dataPath[0]}`)
+
+    const dataRef = ref(database, `/${dataPath[0]}`)
     return (
       update(dataRef, newDataObj)
     )

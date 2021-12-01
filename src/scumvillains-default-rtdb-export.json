@@ -110,17 +110,6 @@
     "debt" : 0,
     "designation" : "CF-350 Series Scarab-class Freighter",
 
-    "enginesOLD" : {
-      "improvements" : [ {
-        "name" : "Jump Drive",
-        "value" : true
-      }, {
-        "name" : "Afterburners",
-        "value" : false
-      } ],
-      "max" : 4
-    },
-
     "engines": {
       "data": [
         {
@@ -138,13 +127,13 @@
         {
           "fixed": false,
           "labelText": "",
-          "name": "",
+          "name": "engines3",
           "value": false
         },
         {
           "fixed": false,
           "labelText": "",
-          "name": "",
+          "name": "engines4",
           "value": false
         }
       ],

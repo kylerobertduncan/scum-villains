@@ -1,10 +1,37 @@
 {
   "aside" : {
-    "alor" : false,
-    "citani" : true,
-    "heani" : false,
-    "rakka" : false,
-    "tkala" : false,
+    "contacts": [
+      {
+        "cost": 1,
+        "labelText": "Alor, a keen-eared barkeep",
+        "name": "alor",
+        "value": false
+      },
+      {
+        "cost": 1,
+        "labelText": "Citani, a reclusive info broker",
+        "name": "citani",
+        "value": true
+      },
+      {
+        "cost": 1,
+        "labelText": "Heani, a tugboat captain",
+        "name": "heani",
+        "value": false
+      },
+      {
+        "cost": 1,
+        "labelText": "Rakka, a diplomat",
+        "name": "rakka",
+        "value": false
+      },
+      {
+        "cost": 1,
+        "labelText": "T'kala, a dockmaster",
+        "name": "tkala",
+        "value": false
+      }
+    ],
 
     "crewXP" : 0,
 
@@ -17,11 +44,10 @@
     "theGetaway" : false,
     "veteran" : false,
 
-    "darkHyperspaceLaneMaps" : true,
-    "falseShipPapers" : false,
-    "luckyCharm" : false,
-    "smugglersRigging" : false,
-    "thrillseekers" : false
+
+    "upgrades": {
+      
+    }
   },
 
   "main" : {
@@ -68,36 +94,43 @@
     "upgrades": {
       "auxiliary": [
         {
+          "cost": 1,
           "labelText": "AI Module",
           "name": "aiModule",
           "value": false
         },
         {
+          "cost": 1,
           "labelText": "Armory",
           "name": "armory",
           "value": false
         },
         {
+          "cost": 1,
           "labelText": "Brig",
           "name": "brig",
           "value": false
         },
         {
+          "cost": 1,
           "labelText": "Galley",
           "name": "galley",
           "value": true
         },
         {
+          "cost": 1,
           "labelText": "Medical Bay",
           "name": "medicalBay",
           "value": false
         },
         {
+          "cost": 1,
           "labelText": "Science Bay",
           "name": "scienceBay",
           "value": false
         },
         {
+          "cost": 2,
           "labelText": "Shields",
           "name": "shields",
           "value": false
@@ -105,21 +138,25 @@
       ],
       "training": [
         {
+          "cost": 1,
           "labelText": "Insight",
           "name": "insight",
           "value": true
         },
         {
+          "cost": 1,
           "labelText": "Playbook",
           "name": "playbook",
           "value": false
         },
         {
+          "cost": 1,
           "labelText": "Prowess",
           "name": "prowess",
           "value": false
         },
         {
+          "cost": 1,
           "labelText": "Resolve",
           "name": "resolve",
           "value": false
@@ -127,36 +164,43 @@
       ],
       "shipGear": [
         {
+          "cost": 1,
           "labelText": "Holo-Emitters",
           "name": "holoEmitters",
           "value": false
         },
         {
+          "cost": 1,
           "labelText": "Intruder Alarm",
           "name": "intruderAlarm",
           "value": false
         },
         {
+          "cost": 1,
           "labelText": "Land Rover",
           "name": "landRover",
           "value": false
         },
         {
+          "cost": 1,
           "labelText": "Power Reserves",
           "name": "powerReserves",
           "value": false
         },
         {
+          "cost": 1,
           "labelText": "Shuttle",
           "name": "shuttle",
           "value": false
         },
         {
+          "cost": 1,
           "labelText": "Stasis Pods",
           "name": "stasisPods",
           "value": false
         },
         {
+          "cost": 1,
           "labelText": "Vault",
           "name": "vault",
           "value": false
@@ -164,29 +208,66 @@
       ],
       "crewGear": [
         {
+          "cost": 1,
           "labelText": "Alien Pet",
           "name": "alienPet",
           "value": false
         },
         {
+          "cost": 1,
           "labelText": "Land Transport",
           "name": "landTransport",
           "value": false
         },
         {
+          "cost": 1,
           "labelText": "Recon Drone",
           "name": "reconDrone",
           "value": false
         },
         {
+          "cost": 1,
           "labelText": "Survival Gear",
           "name": "survivalGear",
           "value": false
         },
         {
+          "cost": 1,
           "labelText": "Workshop",
           "name": "workshop",
           "value": true
+        }
+      ],
+      "special": [
+        {
+          "cost": 1,
+          "labelText": "False Ship Papers",
+          "name": "falseShipPapers",
+          "value": false
+        },
+        {
+          "cost": 1,
+          "labelText": "Dark Hyperspace Lane Maps",
+          "name": "darkHyperspaceLaneMaps",
+          "value": false
+        },
+        {
+          "cost": 1,
+          "labelText": "Smugglers Rigging",
+          "name": "smugglersRigging",
+          "value": false
+        },
+        {
+          "cost": 2,
+          "labelText": "Lucky Charm",
+          "name": "luckyCharm",
+          "value": false
+        },
+        {
+          "cost": 3,
+          "labelText": "Thrillseekers",
+          "name": "thrillseekers",
+          "value": false
         }
       ]
     },

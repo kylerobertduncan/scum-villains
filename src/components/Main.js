@@ -44,7 +44,7 @@ const Main = ({main}) => {
         </section>
 
         <section className="flex shipSize">
-          <label>Ship Size</label>
+          <label>Ship Size: </label>
           <p>Personal — <span className="bold">Freighter</span> — Corvette — Frigate — Dreadnought</p>
         </section>
 
@@ -115,11 +115,12 @@ const Main = ({main}) => {
             <h4>Auxiliary</h4>
           {
             main.upgrades?.auxiliary.map( (upgrade) => {
-              const { labelText, name, value } = upgrade;
+              const { cost, labelText, name, value } = upgrade;
               return(
                 <BooleanField
+                  cost={cost}
                   data={main.upgrades.auxiliary}
-                  dataPath={['upgrades', 'auxiliary']}
+                  dataPath={['main', 'upgrades', 'auxiliary']}
                   key={name}
                   labelText={labelText}
                   name={name}
@@ -138,7 +139,7 @@ const Main = ({main}) => {
                 return (
                   <BooleanField
                     data={main.upgrades.training}
-                    dataPath={['upgrades', 'training']}
+                    dataPath={['main', 'upgrades', 'training']}
                     key={name}
                     labelText={labelText}
                     name={name}
@@ -157,7 +158,7 @@ const Main = ({main}) => {
                 return (
                   <BooleanField
                     data={main.upgrades.shipGear}
-                    dataPath={['upgrades', 'shipGear']}
+                    dataPath={['main', 'upgrades', 'shipGear']}
                     key={name}
                     labelText={labelText}
                     name={name}
@@ -176,7 +177,27 @@ const Main = ({main}) => {
                 return (
                   <BooleanField
                     data={main.upgrades.crewGear}
-                    dataPath={['upgrades', 'crewGear']}
+                    dataPath={['main', 'upgrades', 'crewGear']}
+                    key={name}
+                    labelText={labelText}
+                    name={name}
+                    value={value}
+                  />
+                )
+              })
+            }
+          </div>
+
+          <div className="special">
+            <h4>Special</h4>
+            {
+              main.upgrades?.special.map((upgrade) => {
+                const { cost, labelText, name, value } = upgrade;
+                return (
+                  <BooleanField
+                    cost={cost}
+                    data={main.upgrades.special}
+                    dataPath={['main', 'upgrades', 'special']}
                     key={name}
                     labelText={labelText}
                     name={name}

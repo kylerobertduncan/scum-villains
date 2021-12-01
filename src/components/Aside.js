@@ -1,3 +1,4 @@
+import BooleanField from "./BooleanField";
 import NumberField from "./NumberField";
 
 const Aside = ({aside}) => {
@@ -67,65 +68,26 @@ const Aside = ({aside}) => {
           </ul>
         </section>
   
-        <div className="flex">
-  
-          <section className="upgrades">
-            <h4>Crew/Ship Upgrades</h4>
-            <ul>
-              <li>
-                <label htmlFor="falseShipPapers">False Ship Papers</label>
-                <input type="checkbox" name="falseShipPapers" />
-              </li>
-              <li>
-                <label htmlFor="darkHyperspaceLaneMaps">Dark Hyperspace Lane Maps</label>
-                <input type="checkbox" name="darkHyperspaceLaneMaps" />
-              </li>
-              <li>
-                <label htmlFor="smugglersRigging">Smuggler's Rigging</label>
-                <input type="checkbox" name="smugglersRigging" />
-              </li>
-              <li>
-                <label htmlFor="luckyCharm">Lucky Charm</label>
-                <input type="checkbox" name="luckyCharm" />
-                <input type="checkbox" name="luckyCharm" />
-              </li>
-              <li>
-                <label htmlFor="thrillseekers">Thrillseekers</label>
-                <input type="checkbox" name="thrillseekers" />
-                <input type="checkbox" name="thrillseekers" />
-                <input type="checkbox" name="thrillseekers" />
-              </li>
-            </ul>
-          </section>
-  
-          <section className="contacts">
-            <h4>Contacts</h4>
-            <ul>
-              <li>
-                <input className="triangle" type="checkbox" name="tkala" />
-                <label htmlFor="tkala">T'kala, a dockmaster</label>
-              </li>
-              <li>
-                <input className="triangle" type="checkbox" name="alor" />
-                <label htmlFor="alor">Alor, a keen-eared barkeep</label>
-              </li>
-              <li>
-                <input className="triangle" type="checkbox" name="heani" />
-                <label htmlFor="heani">Heani, a tugboat captain</label>
-              </li>
-              <li>
-                <input className="triangle" type="checkbox" name="rakka" />
-                <label htmlFor="rakka">Rakka, a diplomat</label>
-              </li>
-              <li>
-                <input className="triangle" type="checkbox" name="citani" />
-                <label htmlFor="citani">Citani, a reclusive info broker</label>
-              </li>
-            </ul>
-          </section>
-  
-        </div>
-  
+        <section className="contacts">
+          <h4>Contacts</h4>
+          {
+            aside.contacts?.map((contact) => {
+              const { cost, labelText, name, value } = contact;
+              return (
+                <BooleanField
+                  cost={cost}
+                  data={aside.contacts}
+                  dataPath={['aside', '', 'contacts']}
+                  key={name}
+                  labelText={labelText}
+                  name={name}
+                  value={value}
+                />
+              )
+            })
+          }
+        </section>
+    
         <section className="crewXP">
           <NumberField
             count={8}

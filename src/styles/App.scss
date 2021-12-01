@@ -23,6 +23,15 @@ h1, h2, h3, h4, h5, p {
   padding: 0;
 }
 
+h1, h2, h3, h4, h5 {
+  text-transform: uppercase;
+}
+
+.sectionHead {
+  background-color: black;
+  color: white;
+}
+
 label,
 li,
 p {
@@ -33,6 +42,10 @@ ul, li {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.bold {
+  font-weight: bolder;
 }
 
 .listStyle,

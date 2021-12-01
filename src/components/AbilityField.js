@@ -1,7 +1,7 @@
 import database from '../firebase';
 import { update, ref } from 'firebase/database';
 
-const BooleanField = (props) => {
+const AbilityField = (props) => {
 
   const { cost, data, dataPath, labelText, name, value } = props;
 
@@ -13,18 +13,16 @@ const BooleanField = (props) => {
       }
     })
     const newDataObj = {
-      [dataPath[2]]: newData
+      [dataPath[1]]: newData
     }
-
-    const pathString = `/${dataPath[0]}/${dataPath[1]}`;
-    const dataRef = ref(database, pathString)
+    
+    const dataRef = ref(database, `/main/${dataPath[0]}`)
     return (
       update(dataRef, newDataObj)
     )
-    
   }
 
-  if (cost === 3) {
+  if (cost === 2) {
     return (
       <div className={name}>
         <input
@@ -39,31 +37,8 @@ const BooleanField = (props) => {
           onChange={handleChange}
           type="checkbox"
         />
-        <input
-          checked={value}
-          name={name}
-          onChange={handleChange}
-          type="checkbox"
-        />
-        <label htmlFor={name}>{labelText}</label>
-      </div>
-    )
-  } else if (cost === 2) {
-    return (
-      <div className={name}>
-        <input
-          checked={value}
-          name={name}
-          onChange={handleChange}
-          type="checkbox"
-        />
-        <input
-          checked={value}
-          name={name}
-          onChange={handleChange}
-          type="checkbox"
-        />
-        <label htmlFor={name}>{labelText}</label>
+        <label htmlFor={name}>{labelText}: </label>
+        <p>{description}</p>
       </div>
     )
   } else  {
@@ -75,10 +50,11 @@ const BooleanField = (props) => {
           onChange={handleChange}
           type="checkbox"
         />
-        <label htmlFor={name}>{labelText}</label>
+        <label htmlFor={name}>{labelText}: </label>
+        <p>{description}</p>
       </div>
     )
   }
 }
 
-export default BooleanField;
+export default AbilityField;

@@ -1,120 +1,198 @@
 {
-  "main": {
-    "crew" : 0,
-    "designation" : "CF-350 Series Scarab-class Freighter",
-    "gambits" : 2,
-    "hull" : {
-      "improvements" : [
-        {
-          "name": "Smuggling Compartments",
-          "value": true
-        },
-        {
-          "name": "Cargo Hold",
-          "value": true
-        }
-      ],
-      "options": [],
-      "max": 4
-    },
-    "reputation": "",
-    "coloursLook": "",
-    "cred": 0,
-    "debt": 0,
-    "skips": 0,
-    "shipSize": {
-      "value": "Freighter"
-    },
-    "engines": {
-      "improvements": [
-        {
-          "name": "Jump Drive",
-          "value": true
-        },
-        {
-          "name": "Afterburners",
-          "value": false
-        }
-      ],
-      "options": [],
-      "max": 4
-    },
-    "comms": {
-      "improvements": [
-        {
-          "name": "Fake Transponder",
-          "value": false
-        },
-        {
-          "name": "Quantum Encryptor",
-          "value": false
-        }
-      ],
-      "options": [],
-      "max": 3
-    },
-    "weapons": {
-      "improvements": [],
-      "options": [],
-      "max": 2
-    },
-    "shields": 1,
-    "notesProjects": [],
-    "upgrades": {
-      "aiModule": false,
-      "armory": false,
-      "brig": false,
-      "galley": true,
-      "medicalBay": false,
-      "scienceBay": false,
-      "shields": false,
+  "aside" : {
+    "alor" : false,
+    "citani" : true,
+    "heani" : false,
+    "rakka" : false,
+    "tkala" : false,
 
-      "insight": true,
-      "prowess": false,
-      "resolve": false,
-      "playbook": false,
+    "crewXP" : 0,
 
-      "holoEmitters": false,
-      "intruderAlarm": false,
-      "landRover": false,
-      "powerReserves": false,
-      "shuttle": false,
-      "stasisPods": false,
-      "vault": false,
-      
-      "alienPet": false,
-      "landTransport": false,
-      "reconDrone": false,
-      "survivalGear": false,
-      "workshop": true
-    }
+    "cargoEye" : true,
+    "fieldRepairs" : false,
+    "homeCooking" : false,
+    "justPassingThrough" : false,
+    "leverage" : false,
+    "problemSolvers" : false,
+    "theGetaway" : false,
+    "veteran" : false,
+
+    "darkHyperspaceLaneMaps" : true,
+    "falseShipPapers" : false,
+    "luckyCharm" : false,
+    "smugglersRigging" : false,
+    "thrillseekers" : false
   },
 
-  "aside": {
-    "specialAbilties": {
-      "theGetaway": false,
-      "cargoEye": true,
-      "fieldRepairs": false,
-      "leverage": false,
-      "justPassingThrough": false,
-      "homeCooking": false,
-      "problemSolvers": false,
-      "veteran": false
+  "main" : {
+    "coloursLook" : "",
+    "comms" : {
+      "improvements" : [ {
+        "name" : "Fake Transponder",
+        "value" : false
+      }, {
+        "name" : "Quantum Encryptor",
+        "value" : false
+      } ],
+      "max" : 3
     },
+    "cred" : 0,
+    "crew" : 0,
+    "debt" : 0,
+    "designation" : "CF-350 Series Scarab-class Freighter",
+    "engines" : {
+      "improvements" : [ {
+        "name" : "Jump Drive",
+        "value" : true
+      }, {
+        "name" : "Afterburners",
+        "value" : false
+      } ],
+      "max" : 4
+    },
+    "gambits" : 2,
+    "hull" : {
+      "improvements" : [ {
+        "name" : "Smuggling Compartments",
+        "value" : true
+      }, {
+        "name" : "Cargo Hold",
+        "value" : true
+      } ],
+      "max" : 4
+    },
+    "reputation" : "",
+    "shields" : 1,
+    "skips" : 0,
+
     "upgrades": {
-      "falseShipPapers": false,
-      "darkHyperspaceLaneMaps": true,
-      "smugglersRigging": false,
-      "luckyCharm": false,
-      "thrillseekers": false
+      "auxiliary": [
+        {
+          "labelText": "AI Module",
+          "name": "aiModule",
+          "value": false
+        },
+        {
+          "labelText": "Armory",
+          "name": "armory",
+          "value": false
+        },
+        {
+          "labelText": "Brig",
+          "name": "brig",
+          "value": false
+        },
+        {
+          "labelText": "Galley",
+          "name": "galley",
+          "value": true
+        },
+        {
+          "labelText": "Medical Bay",
+          "name": "medicalBay",
+          "value": false
+        },
+        {
+          "labelText": "Science Bay",
+          "name": "scienceBay",
+          "value": false
+        },
+        {
+          "labelText": "Shields",
+          "name": "shields",
+          "value": false
+        }
+      ],
+      "training": [
+        {
+          "labelText": "Insight",
+          "name": "insight",
+          "value": true
+        },
+        {
+          "labelText": "Playbook",
+          "name": "playbook",
+          "value": false
+        },
+        {
+          "labelText": "Prowess",
+          "name": "prowess",
+          "value": false
+        },
+        {
+          "labelText": "Resolve",
+          "name": "resolve",
+          "value": false
+        }
+      ],
+      "shipGear": [
+        {
+          "labelText": "Holo-Emitters",
+          "name": "holoEmitters",
+          "value": false
+        },
+        {
+          "labelText": "Intruder Alarm",
+          "name": "intruderAlarm",
+          "value": false
+        },
+        {
+          "labelText": "Land Rover",
+          "name": "landRover",
+          "value": false
+        },
+        {
+          "labelText": "Power Reserves",
+          "name": "powerReserves",
+          "value": false
+        },
+        {
+          "labelText": "Shuttle",
+          "name": "shuttle",
+          "value": false
+        },
+        {
+          "labelText": "Stasis Pods",
+          "name": "stasisPods",
+          "value": false
+        },
+        {
+          "labelText": "Vault",
+          "name": "vault",
+          "value": false
+        }
+      ],
+      "crewGear": [
+        {
+          "labelText": "Alien Pet",
+          "name": "alienPet",
+          "value": false
+        },
+        {
+          "labelText": "Land Transport",
+          "name": "landTransport",
+          "value": false
+        },
+        {
+          "labelText": "Recon Drone",
+          "name": "reconDrone",
+          "value": false
+        },
+        {
+          "labelText": "Survival Gear",
+          "name": "survivalGear",
+          "value": false
+        },
+        {
+          "labelText": "Workshop",
+          "name": "workshop",
+          "value": true
+        }
+      ]
     },
-    "contacts": {
-      "tkala": false,
-      "alor": false,
-      "heani": false,
-      "rakka": false,
-      "citani": true
-    },
-    "crewXP": 0
+
+    "weapons" : {
+      "max" : 2
+    }
   }
 }

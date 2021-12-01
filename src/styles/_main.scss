@@ -4,3 +4,19 @@ main {
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+header {
+  justify-content: space-between;
+}
+
+.designation,
+.reputation {
+  display: flex;
+  flex-direction: column-reverse;
+  min-width: 50%;
+}
+
+.upgrades {
+  display: flex;
+  justify-content: space-between;
+}

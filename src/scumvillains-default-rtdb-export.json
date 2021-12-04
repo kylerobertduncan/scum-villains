@@ -1,37 +1,5 @@
 {
   "aside" : {
-    "contacts": [
-      {
-        "cost": 1,
-        "labelText": "Alor, a keen-eared barkeep",
-        "name": "alor",
-        "value": false
-      },
-      {
-        "cost": 1,
-        "labelText": "Citani, a reclusive info broker",
-        "name": "citani",
-        "value": true
-      },
-      {
-        "cost": 1,
-        "labelText": "Heani, a tugboat captain",
-        "name": "heani",
-        "value": false
-      },
-      {
-        "cost": 1,
-        "labelText": "Rakka, a diplomat",
-        "name": "rakka",
-        "value": false
-      },
-      {
-        "cost": 1,
-        "labelText": "T'kala, a dockmaster",
-        "name": "tkala",
-        "value": false
-      }
-    ],
     "crewXP" : 0,
     "specialAbilities": [
       {
@@ -94,17 +62,39 @@
   },
 
   "main" : {
+    "contacts": [
+      {
+        "cost": 1,
+        "labelText": "Alor, a keen-eared barkeep",
+        "name": "alor",
+        "value": false
+      },
+      {
+        "cost": 1,
+        "labelText": "Citani, a reclusive info broker",
+        "name": "citani",
+        "value": true
+      },
+      {
+        "cost": 1,
+        "labelText": "Heani, a tugboat captain",
+        "name": "heani",
+        "value": false
+      },
+      {
+        "cost": 1,
+        "labelText": "Rakka, a diplomat",
+        "name": "rakka",
+        "value": false
+      },
+      {
+        "cost": 1,
+        "labelText": "T'kala, a dockmaster",
+        "name": "tkala",
+        "value": false
+      }
+    ],
     "coloursLook" : "",
-    "comms" : {
-      "improvements" : [ {
-        "name" : "Fake Transponder",
-        "value" : false
-      }, {
-        "name" : "Quantum Encryptor",
-        "value" : false
-      } ],
-      "max" : 3
-    },
     "cred" : 0,
     "crew" : 0,
     "debt" : 0,
@@ -144,15 +134,38 @@
     },
 
     "gambits" : 2,
-    "hull" : {
-      "improvements" : [ {
-        "name" : "Smuggling Compartments",
-        "value" : true
-      }, {
-        "name" : "Cargo Hold",
-        "value" : true
-      } ],
-      "max" : 4
+    
+    "hull": {
+      "data": [
+        {
+          "fixed": true,
+          "labelText": "Smuggling Compartments",
+          "name": "smugglingCompartments",
+          "value": true
+        },
+        {
+          "fixed": true,
+          "labelText": "Cargo Hold",
+          "name": "cargoHold",
+          "value": true
+        },
+        {
+          "fixed": false,
+          "labelText": "",
+          "name": "hull2",
+          "value": false
+        },
+        {
+          "fixed": false,
+          "labelText": "",
+          "name": "hull3",
+          "value": false
+        }
+      ],
+      "options": [
+        "Crew Quarters",
+        "Landing Bay"
+      ]
     },
     "reputation" : "",
     "shields" : 1,
@@ -339,8 +352,56 @@
       ]
     },
 
-    "weapons" : {
-      "max" : 2
+    "weapons": {
+      "data": [
+        {
+          "fixed": false,
+          "labelText": "",
+          "name": "weapon0",
+          "value": false
+        },
+        {
+          "fixed": false,
+          "labelText": "",
+          "name": "weapon1",
+          "value": false
+        }
+      ],
+      "options": [
+        "Coherence Cannon",
+        "Grappling Hooks",
+        "Mining Drill",
+        "Missiles",
+        "Particle Cannons"
+      ]
+    },
+
+    "comms": {
+      "data": [
+        {
+          "fixed": true,
+          "labelText": "Fake Transponder",
+          "name": "fakeTransponder",
+          "value": true
+        },
+        {
+          "fixed": true,
+          "labelText": "Quantum Encryptor",
+          "name": "quantumEncryptor",
+          "value": true
+        },
+        {
+          "fixed": false,
+          "labelText": "",
+          "name": "comms2",
+          "value": false
+        }
+      ],
+      "options": [
+        "Long-Range Scanner",
+        "Nexus Link",
+        "Targeting Computer"
+      ]
     }
   }
 }

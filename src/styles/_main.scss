@@ -16,7 +16,23 @@ header {
   min-width: 50%;
 }
 
-select[class="grey"] {
+.shipInfo {
+  label {
+    font-size: 0.7rem;
+  }
+}
+
+.coloursLook {
+  label {
+    display: inline-block;
+    width: 15%;
+  }
+  input {
+    width: 85%;
+  }
+}
+
+.systems p {
   color: red;
 }
 

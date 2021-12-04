@@ -77,14 +77,14 @@ const SystemField = (props) => {
   }
 
   return(
-    <section className={dataPath}>
+    <section className={`${dataPath} systems`}>
       <div className="flex">
         <label>{headerText}</label>
         <p>(system count here)</p>
       </div>
       <ul>
       {
-        system?.data.map( (improvement, index) => {
+        system?.data?.map( (improvement, index) => {
           // console.log(improvement);
           const { fixed, labelText, name, value } = improvement;
           if (fixed) {

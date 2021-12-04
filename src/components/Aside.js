@@ -33,26 +33,6 @@ const Aside = ({aside}) => {
             })
           }
         </section>
-  
-        <section className="contacts">
-          <h4>Contacts</h4>
-          {
-            aside.contacts?.map((contact) => {
-              const { cost, labelText, name, value } = contact;
-              return (
-                <BooleanField
-                  cost={cost}
-                  data={aside.contacts}
-                  dataPath={['aside', '', 'contacts']}
-                  key={name}
-                  labelText={labelText}
-                  name={name}
-                  value={value}
-                />
-              )
-            })
-          }
-        </section>
     
         <section className="crewXP">
           <NumberField

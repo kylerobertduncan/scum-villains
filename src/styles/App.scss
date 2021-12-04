@@ -2,15 +2,41 @@
 @import 'main';
 @import 'aside';
 
+@import url("https://fonts.googleapis.com/css2?family=Genos:wght@100&family=Geo&family=Odibee+Sans&family=Sarpanch:wght@900&family=Space+Grotesk&family=ZCOOL+QingKe+HuangYou&display=swap");
+
+/*
+Font Families
+Genos
+Geo
+Odibee
+Sarpanch **
+Space Grotesk - MAIN FONT
+ZCOOL QingKe HuangYou **
+*/
+
 html {
   cursor: default;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 125%;
   margin: 20px;
+  input, select {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+  }
 }
 
 .flex {
   display: flex;
   width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  .rules {
+    grid-column-end: span 2;
+  }
 }
 
 img {
@@ -23,8 +49,17 @@ h1, h2, h3, h4, h5, p {
   padding: 0;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, label {
+  font-family: 'Sarpanch', sans-serif;
   text-transform: uppercase;
+}
+
+h1 {
+  font-family: 'Sarpanch', sans-serif;
+  .light {
+    font-weight: lighter;
+    text-transform: lowercase;
+  }
 }
 
 .sectionHead {
@@ -44,9 +79,20 @@ ul, li {
   padding: 0;
 }
 
-select {
+li, .contacts, .upgrades {
+  label {
+    font-family: 'Space Grotesk', sans-serif;
+    text-transform: none;
+  }
+}
+
+input, select {
   background: none;
-  border: none;
+  border: 1px solid lightgray;
+}
+
+select[value=""] {
+  color: red;
 }
 
 .bold {
@@ -72,6 +118,7 @@ aside {
 }
 
 section {
-  background: rgba(255, 255, 255, 0.5);
-  border: 1px solid red;
+  background: rgba(255, 255, 255, 0.75);
+  // border: 1px solid palegreen;
+  padding: 5px;
 }

@@ -22,7 +22,7 @@ function App() {
     <div className="App">
 
       <header className="flex">
-        <h1>Stable Orbit</h1>
+        <h1>Scum &amp; Villainy – <span className="light">the</span> Stable Orbit</h1>
         <p className="smallText">Illicit Merchants, Smugglers, and Blockade Runners</p>
       </header>
 

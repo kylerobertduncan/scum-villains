@@ -1,5 +1,5 @@
 import AbilityField from "./AbilityField";
-import BooleanField from "./BooleanField";
+// import BooleanField from "./BooleanField";
 import NumberField from "./NumberField";
 
 const Aside = ({aside}) => {

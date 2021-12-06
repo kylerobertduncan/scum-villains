@@ -1,9 +1,10 @@
+import { useEffect } from 'react';
 import database from '../firebase';
 import { update, ref } from 'firebase/database';
 
 const SystemField = (props) => {
 
-  const { system, dataPath, headerText } = props;
+  const { system, dataPath, headerText, systemTally, setSystemTally } = props;
 
   /*
 
@@ -16,6 +17,24 @@ const SystemField = (props) => {
   total the checked improvements for system count
 
   */
+
+  useEffect( () => {
+    let totalImprovements = 0;
+    if (system) {
+      system?.data?.forEach((improvement) => {
+        if (improvement.value === true) {
+          totalImprovements = totalImprovements + 1;
+        }
+      })
+      const newCount = {
+        count: totalImprovements
+      }
+      const dataRef = ref(database, `main/${dataPath}`)
+      return (
+        update(dataRef, newCount)
+      )
+    }
+  }, [system])
 
   const decapitalize = ([first, ...rest]) => {
     const newString = first.toLowerCase() + rest.join('');
@@ -47,45 +66,45 @@ const SystemField = (props) => {
   }
 
   const handleChange = (e) => {
-    // get relevant values
-    // console.log(e.target.name, e.target.value);
     // build a new data array
     const newDataArr = [...system.data]
     // check data for appropriate match
-    newDataArr.forEach( (improvement, index) => {
-      // console.log(improvement);
+    newDataArr.forEach( (improvement) => {
+      // find this matching item in the data array
       if (improvement.name === e.target.name) {
+        // check an improvement has been selected
         if (improvement.labelText === "") {
           alert("Select an improvement before equipping!")
         } else {
+          // change the boolean value in the data to match
           improvement.value = e.target.checked
-          // console.log('changed at index', index);
-          // console.log(system.data[index]);
-          
         }
       }
     })
+    // create new data object
     const newDataObj = {
       data: newDataArr
     }
-
+    // send new data object to firebase
     const dataRef = ref(database, `main/${dataPath}`);
     return(
       update(dataRef, newDataObj)
     )
-    // console.log(newDataArr);
   }
 
   return(
     <section className={`${dataPath} systems`}>
       <div className="flex">
         <label>{headerText}</label>
-        <p>(system count here)</p>
+        {
+          system ?
+          <input type="number" name={`${dataPath}Count`} value={system.count} readOnly className="systemCount" />
+          : null
+        }
       </div>
       <ul>
       {
         system?.data?.map( (improvement, index) => {
-          // console.log(improvement);
           const { fixed, labelText, name, value } = improvement;
           if (fixed) {
             return(

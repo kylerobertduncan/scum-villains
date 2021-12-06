@@ -32,8 +32,13 @@ header {
   }
 }
 
-.systems p {
-  color: red;
+.systems .flex,
+.upkeep .flex {
+  justify-content: space-between;
+}
+
+.systemCount {
+  width: 20%;
 }
 
 .upgrades {

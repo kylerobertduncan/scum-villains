@@ -4,7 +4,7 @@ import { update, ref } from 'firebase/database';
 
 const SystemField = (props) => {
 
-  const { system, dataPath, headerText, systemTally, setSystemTally } = props;
+  const { system, dataPath, headerText } = props;
 
   /*
 
@@ -34,7 +34,7 @@ const SystemField = (props) => {
         update(dataRef, newCount)
       )
     }
-  }, [system])
+  }, [dataPath, system])
 
   const decapitalize = ([first, ...rest]) => {
     const newString = first.toLowerCase() + rest.join('');

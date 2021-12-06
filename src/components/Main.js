@@ -8,10 +8,10 @@ const Main = ({main}) => {
 
   const [ upkeep, setUpkeep ] = useState(0);
 
-  const calculateUpkeep = () => {
-    const systemsArr = [ 'comms', 'engines', 'hull', 'weapons']
+  useEffect( () => {
+    const systemsArr = ['comms', 'engines', 'hull', 'weapons']
     let totalSystems = 0;
-    systemsArr.forEach( (system) => {
+    systemsArr.forEach((system) => {
       if (main[system]) {
         // console.log(system, main[system].count);
         const toAdd = main[system].count
@@ -25,11 +25,6 @@ const Main = ({main}) => {
       // console.log(newUpkeep);
       setUpkeep(newUpkeep)
     }
-  }
-
-  useEffect( () => {
-    // calculate upkeep
-    calculateUpkeep();
   }, [main])
 
   if (!main) {

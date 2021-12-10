@@ -16,7 +16,10 @@ const TextField = (props) => {
 
   return(
     <div className={name}>
-      <label htmlFor={name}>{labelText}</label>
+      <label
+        htmlFor={name}
+        className={data[name] === "" ? "normal" : "faded"}
+      ><h4>{labelText}</h4></label>
       <input
         name={name}
         onChange={handleChange}

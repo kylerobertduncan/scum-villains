@@ -57,7 +57,7 @@ const Main = ({main}) => {
         </section>
 
         <section className="flex shipSize">
-          <label>Ship Size: </label>
+          <label><h3>Ship Size: </h3></label>
           <p>Personal — <span className="bold">Freighter</span> — Corvette — Frigate — Dreadnought</p>
         </section>
 
@@ -69,7 +69,7 @@ const Main = ({main}) => {
               <li>
                 <p>Each downtime you don’t pay your ship’s upkeep, roll a die
                   for each consecutive downtime you haven’t paid.</p>
-                <ul>
+                <ul className="smallText">
                   <li>1-3 No worries.</li>
                   <li>4/5 Damage to a system, but it’s minor. You can rig a solution.</li>
                   <li>6+ A system is badly damaged and must be repaired.</li>
@@ -88,7 +88,7 @@ const Main = ({main}) => {
                 data={main}
               />
             </section>
-            <section className="gambits">
+            <section className="gambits" title="Reset to 2 gambits at the start of every job">
               <NumberField
                 count={8}
                 dataPath='/main'
@@ -96,9 +96,9 @@ const Main = ({main}) => {
                 name="gambits"
                 data={main}
               />
-              <p className="smallText">Reset to 2 gambits at the start of every job</p>
+              {/* <p className="smallText">Reset to 2 gambits at the start of every job</p> */}
             </section>
-            <section className="credDebt flex">
+            <section className="credDebt">
               <NumberField
                 count={4}
                 dataPath='/main'
@@ -140,12 +140,12 @@ const Main = ({main}) => {
           {/* </div> */}
 
           <section className="upkeepSkips flex column">
-            <div className="upkeep">
+            <div className="upkeep" title="Systems + Crew) / 4">
               <div className="flex">
-                <label>Upkeep</label>
-                <input type="number" name="upkeep" value={upkeep} readOnly className="systemCount" />
+                <label><h3>Upkeep</h3></label>
+                <input type="text" name="upkeep" value={upkeep} readOnly className="systemCount" />
               </div>
-              <p className="smallText">(Systems + Crew) / 4</p>
+              {/* <p className="smallText">(Systems + Crew) / 4</p> */}
               <p className="smallText">Paid at the start of every downtime</p>
               {/* downward pointing arrow */}
             </div>

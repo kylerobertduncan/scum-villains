@@ -14,7 +14,7 @@ const Aside = ({aside}) => {
       <aside>
   
         <section className="specialAbilities">
-          <h4>Special Abilities</h4>
+          <h2>Special Abilities</h2>
           {
             aside.specialAbilities?.map( (ability) => {
               const { cost, description, labelText, name, value } = ability;

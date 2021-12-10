@@ -2,32 +2,48 @@
 @import 'main';
 @import 'aside';
 
-@import url("https://fonts.googleapis.com/css2?family=Genos:wght@100&family=Geo&family=Odibee+Sans&family=Sarpanch:wght@900&family=Space+Grotesk&family=ZCOOL+QingKe+HuangYou&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sarpanch:wght@500;700;900&family=Space+Grotesk:wght@400;700&display=swap");
 
 /*
-Font Families
-Genos
-Geo
-Odibee
-Sarpanch **
-Space Grotesk - MAIN FONT
-ZCOOL QingKe HuangYou **
+font-family: 'Sarpanch', sans-serif;
+// heading font, 500, 700, 900
+font-family: 'Space Grotesk', sans-serif;
+// main font, 300, 700
 */
 
 html {
   cursor: default;
   font-family: 'Space Grotesk', sans-serif;
   font-size: 125%;
-  margin: 20px;
+  // font-weight: 300;
+  margin: 10px;
   input, select {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 0.8rem;
   }
+  background-image: url("../assets/stable-orbit--longhaul-frigate.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .flex {
   display: flex;
   width: 100%;
+}
+
+.App {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+header {
+  justify-content: space-around;
+  align-items: center;
+  .shipDesc {
+  display: inline-block;
+  text-align: right;
+  vertical-align: bottom;
+  }
 }
 
 .grid {
@@ -40,8 +56,7 @@ html {
 }
 
 img {
-  max-height: 75vh;
-  // max-width: 50vw;
+  max-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, p {
@@ -49,17 +64,22 @@ h1, h2, h3, h4, h5, p {
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, label {
+h1, h2, h3, h4, h5 {
   font-family: 'Sarpanch', sans-serif;
+  font-weight: 900;
   text-transform: uppercase;
 }
 
 h1 {
-  font-family: 'Sarpanch', sans-serif;
   .light {
-    font-weight: lighter;
+    font-weight: 500;
     text-transform: lowercase;
   }
+}
+
+.smallText,
+.smallText li {
+  font-size: 0.7rem;
 }
 
 .sectionHead {
@@ -70,13 +90,21 @@ h1 {
 label,
 li,
 p {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 }
 
-ul, li {
+ul, li, select {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.radioButtons {
+  // justify-content: space-between;
+  width: 100%;
+  input {
+    margin-left: 5px;
+  }
 }
 
 li, .contacts, .upgrades {
@@ -88,15 +116,21 @@ li, .contacts, .upgrades {
 
 input, select {
   background: none;
-  border: 1px solid lightgray;
+  border: none;
+  border-bottom: 1px solid lightgray;
 }
 
-select[value=""] {
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+input[type="number"] {
   color: red;
 }
 
 .bold {
-  font-weight: bolder;
+  font-weight: 700;
+  text-decoration: underline;
+  // text-shadow: 1px 1px yellow;
 }
 
 .listStyle,
@@ -118,7 +152,7 @@ aside {
 }
 
 section {
-  background: rgba(255, 255, 255, 0.75);
+  // background: rgba(255, 255, 255, 0.75);
   // border: 1px solid palegreen;
   padding: 5px;
 }

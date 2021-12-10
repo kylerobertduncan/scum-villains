@@ -1,34 +1,46 @@
-main {
-  background-image: url("../assets/stable-orbit--longhaul-frigate.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
+// main {
+//   background-image: url("../assets/stable-orbit--longhaul-frigate.jpg");
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: contain;
+// }
 
 header {
   justify-content: space-between;
 }
 
-.designation,
-.reputation {
-  display: flex;
-  flex-direction: column-reverse;
-  min-width: 50%;
-}
-
 .shipInfo {
-  label {
-    font-size: 0.7rem;
+  .designation,
+  .reputation {
+    display: flex;
+    flex-direction: column-reverse;
+    min-width: 50%;
+  }
+  div {
+    position: relative;
+    label {
+      bottom: 5px;
+      font-size: 0.7rem;
+      right: 5px;
+      position: absolute;
+    }
+    .faded {
+      opacity: 0.2;
+    }
+    input {
+      width: 100%;
+      font-weight: 700;
+    }
   }
 }
 
-.coloursLook {
-  label {
-    display: inline-block;
-    width: 15%;
-  }
-  input {
-    width: 85%;
+.shipSize {
+  justify-content: space-evenly;
+}
+
+.rules {
+  li {
+    margin-top: 5px;
   }
 }
 
@@ -37,7 +49,31 @@ header {
   justify-content: space-between;
 }
 
+.systems {
+  li {
+    padding-bottom: 5px;
+  }
+  label {
+    height: 21px;
+  }
+}
+
+.systems,
+.upkeep {
+  input[type="text"] {
+    font-family: 'Sarpanch', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+}
+
+.skips {
+  margin-top: 10px;
+}
+
 .systemCount {
+  text-shadow: 1px 1px yellow;
+  text-align: center;
   width: 20%;
 }
 

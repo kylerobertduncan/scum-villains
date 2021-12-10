@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import database from '../firebase';
 import { update, ref } from 'firebase/database';
 
@@ -6,21 +6,36 @@ const SystemField = (props) => {
 
   const { system, dataPath, headerText } = props;
 
-  /*
+  const [ availableImprovements, setAvailableImprovements ] = useState([]);
 
-  render the fixed improvements w checkbox
-
-  show options dropdown for remaining slots
-
-  save selected options and checkbox value
-
-  total the checked improvements for system count
-
-  */
+/*
+render the fixed improvements w checkbox
+show options dropdown for remaining slots
+save selected options and checkbox value
+total the checked improvements for system count
+*/
 
   useEffect( () => {
     let totalImprovements = 0;
     if (system) {
+      // list only unused system improvements
+      const { options } = system;
+      const availableOptions = options.filter( (option) => {
+        let alreadyAdded = false;
+        system?.data?.forEach( (improvement) => {
+          if (option === improvement.labelText) {
+            alreadyAdded = true;
+          }
+        });
+        if (!alreadyAdded) {
+          return true
+        } else {
+          return false
+        }
+      })
+      setAvailableImprovements(availableOptions);
+
+      // tally and record system totals
       system?.data?.forEach((improvement) => {
         if (improvement.value === true) {
           totalImprovements = totalImprovements + 1;
@@ -95,10 +110,10 @@ const SystemField = (props) => {
   return(
     <section className={`${dataPath} systems`}>
       <div className="flex">
-        <label>{headerText}</label>
+        <label><h3>{headerText}</h3></label>
         {
           system ?
-          <input type="number" name={`${dataPath}Count`} value={system.count} readOnly className="systemCount" />
+          <input type="text" name={`${dataPath}Count`} value={system.count} readOnly className="systemCount" />
           : null
         }
       </div>
@@ -135,7 +150,15 @@ const SystemField = (props) => {
                 >
                   <option value="" >Empty slot</option>
                   {
-                    system?.options.map( (option) => {
+                    labelText ?
+                      system?.options.map((option) => {
+                        const optionName = decapitalize(option)
+                        return (
+                          <option key={optionName} value={option}>{option}</option>
+                        )
+                      })
+                    :
+                    availableImprovements.map( (option) => {
                       const optionName = decapitalize(option)
                       return(
                         <option key={optionName} value={option}>{option}</option>

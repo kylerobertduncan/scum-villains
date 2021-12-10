@@ -27,8 +27,8 @@ const NumberField = (props) => {
 
   if ( count === 1 ) {
     return (
-      <div className={name}>
-        <label htmlFor={name}>{labelText}</label>
+      <div className={`${name} flex radioButtons`}>
+        <label htmlFor={name}><h3>{labelText}</h3></label>
         <input
           checked={data[name] === 1}
           name={name}
@@ -41,8 +41,8 @@ const NumberField = (props) => {
     )
   } else if ( count === 3 ) {
     return (
-      <div className={name}>
-        <label htmlFor={name}>{labelText}</label>
+      <div className={`${name} flex radioButtons`}>
+        <label htmlFor={name}><h3>{labelText}</h3></label>
         <input
           checked={data[name] === 1}
           name={name}
@@ -71,8 +71,8 @@ const NumberField = (props) => {
     )
   } else if (count === 4) {
     return (
-      <div className={name}>
-        <label htmlFor={name}>{labelText}</label>
+      <div className={`${name} flex radioButtons`}>
+        <label htmlFor={name}><h3>{labelText}</h3></label>
         <input
           checked={data[name] === 1}
           name={name}
@@ -109,8 +109,8 @@ const NumberField = (props) => {
     )
   } else if (count === 6) {
     return (
-      <div className={name}>
-        <label htmlFor={name}>{labelText}</label>
+      <div className={`${name} flex radioButtons`}>
+        <label htmlFor={name}><h3>{labelText}</h3></label>
         <input
           checked={data[name] === 1}
           name={name}
@@ -163,8 +163,8 @@ const NumberField = (props) => {
     )
   } else if (count === 8) {
     return(
-      <div className={name}>
-        <label htmlFor={name}>{labelText}</label>
+      <div className={`${name} flex radioButtons`}>
+        <label htmlFor={name}><h3>{labelText}</h3></label>
         <input
           checked={data[name] === 1}
           name={name}

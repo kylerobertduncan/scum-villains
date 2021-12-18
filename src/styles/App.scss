@@ -87,6 +87,7 @@ h1 {
   color: white;
 }
 
+h3,
 label,
 li,
 p {
@@ -156,3 +157,5 @@ section {
   // border: 1px solid palegreen;
   padding: 5px;
 }
+
+@import 'numberField';

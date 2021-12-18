@@ -1,0 +1,47 @@
+.radioButtons h3 {
+  margin-right: 5px;
+}
+
+.fillBoxDiv {
+  display: relative;
+  transform: skew(-20deg);
+}
+
+[type="radio"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.fillBox {
+  margin-right: 2px;
+  position: relative;
+}
+
+.fillBox::before {
+  border: 1px solid black;
+  content: "";
+  display: inline-block;
+  /* remove when finished */
+  height: 20px;
+  width: 20px;
+}
+
+.fillBox::after {
+  /* use a CSS animation to 'fill' the fillBox */
+  background-color: yellow;
+  content: "";
+  display: inline-block;
+  /* remove when finished */
+  height: 16px;
+  width: 0;
+  /* position inside fillBox */
+  position: absolute;
+  bottom: 7px;
+  left: 2px;
+  transition: width 0.2s linear;
+}
+
+[type="radio"]:checked + .fillBox::after,
+[type="radio"].filled + .fillBox::after {
+  width: 16px;
+}

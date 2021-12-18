@@ -79,15 +79,7 @@ const Main = ({main}) => {
           </section>
 
           <div className="gridBox">
-            <section className="crew">
-              <NumberField
-                count={3}
-                dataPath='/main'
-                labelText="Crew"
-                name="crew"
-                data={main}
-              />
-            </section>
+            
             <section className="gambits" title="Reset to 2 gambits at the start of every job">
               <NumberField
                 count={8}
@@ -98,6 +90,7 @@ const Main = ({main}) => {
               />
               {/* <p className="smallText">Reset to 2 gambits at the start of every job</p> */}
             </section>
+            
             <section className="credDebt">
               <NumberField
                 count={4}
@@ -114,6 +107,17 @@ const Main = ({main}) => {
                 data={main}
               />
             </section>
+
+            <section className="crew">
+              <NumberField
+                count={3}
+                dataPath='/main'
+                labelText="Crew"
+                name="crew"
+                data={main}
+              />
+            </section>
+
           </div>
 
           {/* <div className="flex systems"> */}

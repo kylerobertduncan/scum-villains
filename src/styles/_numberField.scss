@@ -45,3 +45,27 @@
 [type="radio"].filled + .fillBox::after {
   width: 16px;
 }
+
+.cred .fillBoxDiv,
+.debt .fillBoxDiv,
+.gambits .fillBoxDiv {
+  transform: skew(0);
+}
+
+.cred {
+  .fillBox::after {
+    background-color: greenyellow;
+  }
+}
+
+.debt {
+  .fillBox::after {
+    background-color: red;
+  }
+}
+
+.gambits {
+  .fillBox::after {
+    background-color: fuchsia;
+  }
+}

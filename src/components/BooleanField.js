@@ -26,56 +26,65 @@ const BooleanField = (props) => {
 
   if (cost === 3) {
     return (
-      <div className={name}>
-        <input
+      <div className={`${name} booleanDiv`}>
+        {/* <input
           checked={value}
+          id={name}
           name={name}
           onChange={handleChange}
           type="checkbox"
         />
         <input
           checked={value}
+          id={name}
           name={name}
           onChange={handleChange}
           type="checkbox"
-        />
+        /> */}
         <input
           checked={value}
+          id={name}
           name={name}
           onChange={handleChange}
           type="checkbox"
         />
-        <label htmlFor={name}>{labelText}</label>
+        <label className='checkbox' htmlFor={name}></label>
+        <label className='checkbox' htmlFor={name}></label>
+        <label className='checkbox' htmlFor={name}>{labelText}</label>
       </div>
     )
   } else if (cost === 2) {
     return (
-      <div className={name}>
+      <div className={`${name} booleanDiv`}>
+        {/* <input
+          checked={value}
+          id={name}
+          name={name}
+          onChange={handleChange}
+          type="checkbox"
+        /> */}
         <input
           checked={value}
+          id={name}
           name={name}
           onChange={handleChange}
           type="checkbox"
         />
-        <input
-          checked={value}
-          name={name}
-          onChange={handleChange}
-          type="checkbox"
-        />
-        <label htmlFor={name}>{labelText}</label>
+        <label className='checkbox' htmlFor={name}></label>
+        <label className='checkbox' htmlFor={name}>{labelText}</label>
       </div>
     )
   } else  {
     return(
-      <div className={name}>
+      <div className={`${name} booleanDiv`}>
         <input
           checked={value}
+          id={name}
           name={name}
           onChange={handleChange}
           type="checkbox"
         />
-        <label htmlFor={name}>{labelText}</label>
+        <label className='checkbox' htmlFor={name}>{labelText}</label>
       </div>
     )
   }

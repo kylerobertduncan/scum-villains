@@ -5,6 +5,7 @@
 .fillBoxDiv {
   display: relative;
   transform: skew(-20deg);
+  width: 22px;
 }
 
 [type="radio"] {
@@ -15,6 +16,7 @@
 .fillBox {
   margin-right: 2px;
   position: relative;
+  // width: 22px;
 }
 
 .fillBox::before {
@@ -24,6 +26,9 @@
   /* remove when finished */
   height: 20px;
   width: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 5px;
 }
 
 .fillBox::after {

@@ -4,7 +4,7 @@
 }
 
 // iPad Landscape
-@media (max-width: 1100px) {
+@media (max-width: 1330px) {
 
   .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -26,12 +26,15 @@
   
   .upgrades {
     flex-wrap: wrap;
+    div {
+      margin-right: 10px;
+    }
   }
 
 }
 
 // iPad Portait
-@media (max-width: 850px) {
+@media (max-width: 880px) {
 
   .wrapper {
     flex-direction: column;
@@ -64,7 +67,7 @@
 }
 
 // Phone Landscape
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 
   header {
     h1 {

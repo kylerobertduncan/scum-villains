@@ -3,12 +3,10 @@ import { useEffect, useState } from 'react';
 const UpkeepField = (props) => {
 
   const { labelText, main, name } = props;
-  console.log(props);
 
   const [upkeep, setUpkeep] = useState(0);
 
   useEffect(() => {
-    console.log('useEffect runs!');
     const systemsArr = ['comms', 'engines', 'hull', 'weapons']
     let totalSystems = 0;
     systemsArr.forEach((system) => {
@@ -18,10 +16,8 @@ const UpkeepField = (props) => {
       }
     })
     const systemsAndCrew = totalSystems + main.crew;
-    // console.log(systemsAndCrew);
     if (systemsAndCrew) {
       const newUpkeep = Math.floor(systemsAndCrew / 4);
-      // console.log(newUpkeep);
       setUpkeep(newUpkeep)
     }
   }, [main])

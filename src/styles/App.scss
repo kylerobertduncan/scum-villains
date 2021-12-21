@@ -36,6 +36,11 @@ html {
   background: rgba(255, 255, 255, 0.85);
 }
 
+.wrapper{
+  margin: 0 auto;
+  max-width: 1450px;
+}
+
 header {
   justify-content: space-around;
   align-items: center;
@@ -160,3 +165,4 @@ section {
 
 @import 'numberField';
 @import 'booleanField';
+@import 'mediaQueries';

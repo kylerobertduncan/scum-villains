@@ -26,10 +26,11 @@ function App() {
         <p className="smallText shipDesc">Illicit Merchants, Smugglers, <br/>and Blockade Runners</p>
       </header>
 
-      <div className="flex">
+      <div className="flex wrapper">
         <Main main={mainData}/>
         <Aside aside={asideData}/>
       </div>
+
     </div>
   );
 }

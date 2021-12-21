@@ -1,31 +1,10 @@
-import { useEffect, useState } from 'react';
 import BooleanField from './BooleanField';
 import NumberField from './NumberField';
 import SystemField from './SystemField';
 import TextField from './TextField';
+import UpkeepField from './UpkeepField';
 
 const Main = ({main}) => {
-
-  const [ upkeep, setUpkeep ] = useState(0);
-
-  useEffect( () => {
-    const systemsArr = ['comms', 'engines', 'hull', 'weapons']
-    let totalSystems = 0;
-    systemsArr.forEach((system) => {
-      if (main[system]) {
-        // console.log(system, main[system].count);
-        const toAdd = main[system].count
-        totalSystems = totalSystems + toAdd;
-      }
-    })
-    const systemsAndCrew = totalSystems + main.crew;
-    // console.log(systemsAndCrew);
-    if (systemsAndCrew) {
-      const newUpkeep = Math.floor(systemsAndCrew / 4);
-      // console.log(newUpkeep);
-      setUpkeep(newUpkeep)
-    }
-  }, [main])
 
   if (!main) {
     return(
@@ -145,10 +124,15 @@ const Main = ({main}) => {
 
           <section className="upkeepSkips flex column">
             <div className="upkeep" title="Systems + Crew) / 4">
-              <div className="flex">
+              <UpkeepField
+                labelText="Upkeep"
+                name="upkeep"
+                main={main}
+              />
+              {/* <div className="flex">
                 <label><h3>Upkeep</h3></label>
                 <input type="text" name="upkeep" value={upkeep} readOnly className="systemCount" />
-              </div>
+              </div> */}
               {/* <p className="smallText">(Systems + Crew) / 4</p> */}
               <p className="smallText">Paid at the start of every downtime</p>
               {/* downward pointing arrow */}

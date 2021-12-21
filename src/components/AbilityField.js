@@ -30,14 +30,10 @@ const AbilityField = (props) => {
           name={name}
           onChange={handleChange}
           type="checkbox"
+          id={name}
         />
-        <input
-          checked={value}
-          name={name}
-          onChange={handleChange}
-          type="checkbox"
-        />
-        <label htmlFor={name}>{labelText}: </label>
+        <label htmlFor={name} className='checkbox'></label>
+        <label htmlFor={name} className='checkbox'>{labelText}: </label>
         <p>{description}</p>
       </div>
     )
@@ -49,8 +45,9 @@ const AbilityField = (props) => {
           name={name}
           onChange={handleChange}
           type="checkbox"
+          id={name}
         />
-        <label htmlFor={name}>{labelText}: </label>
+        <label htmlFor={name} className='checkbox'>{labelText}: </label>
         <p>{description}</p>
       </div>
     )

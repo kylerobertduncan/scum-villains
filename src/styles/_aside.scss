@@ -3,10 +3,24 @@
 }
 
 .specialAbilities {
-  label {
-    font-weight: bolder;
+  div {
+    line-height: 1;
+    margin-bottom: 10px;
+    label {
+      font-weight: bolder;
+    }
+    p {
+      display: inline;
+      font-size: 0.7rem;
+    }
   }
-  p {
-    display: inline;
+}
+
+.crewXP {
+  // p, ul, li {
+  //   // font-size: 0.75rem;
+  // }
+  li {
+    margin-top: 5px;
   }
 }

@@ -140,8 +140,9 @@ total the checked improvements for system count
                   name={name}
                   onChange={handleChange}
                   type="checkbox"
+                  id={name}
                 />
-                <label htmlFor={name}>{labelText}</label>
+                <label htmlFor={name} className='checkbox'>{labelText}</label>
               </li>
             )
           } else {
@@ -152,7 +153,9 @@ total the checked improvements for system count
                   name={name}
                   onChange={handleChange}
                   type="checkbox"
+                  id={name}
                 />
+                <label htmlFor={name} className='checkbox'></label>
                 <select
                   className={index}
                   name={name}

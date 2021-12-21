@@ -37,7 +37,32 @@
   transition: width 0.2s linear;
 }
 
-[type="checkbox"]:checked + .checkbox::after,
-[type="checkbox"].filled + .checkbox::after {
+.extraCheck {
+  border: 1px solid black;
+  content: "";
+  display: inline-block;
+  /* remove when finished */
+  height: 15px;
+  margin-right: 5px;
+  width: 15px;
+}
+
+.extraCheck::after {
+  /* use a CSS animation to 'fill' the checkbox */
+  background-color: blue;
+  content: "";
+  display: inline-block;
+  /* remove when finished */
+  height: 11px;
+  width: 0;
+  /* position inside checkbox */
+  position: absolute;
+  bottom: 7px;
+  left: 2px;
+  transition: width 0.2s linear;
+}
+
+[type="checkbox"]:checked ~ .checkbox::after,
+[type="checkbox"].filled ~ .checkbox::after {
   width: 11px;
 }

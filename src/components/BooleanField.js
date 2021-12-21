@@ -27,20 +27,6 @@ const BooleanField = (props) => {
   if (cost === 3) {
     return (
       <div className={`${name} booleanDiv`}>
-        {/* <input
-          checked={value}
-          id={name}
-          name={name}
-          onChange={handleChange}
-          type="checkbox"
-        />
-        <input
-          checked={value}
-          id={name}
-          name={name}
-          onChange={handleChange}
-          type="checkbox"
-        /> */}
         <input
           checked={value}
           id={name}
@@ -56,13 +42,6 @@ const BooleanField = (props) => {
   } else if (cost === 2) {
     return (
       <div className={`${name} booleanDiv`}>
-        {/* <input
-          checked={value}
-          id={name}
-          name={name}
-          onChange={handleChange}
-          type="checkbox"
-        /> */}
         <input
           checked={value}
           id={name}

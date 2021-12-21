@@ -21,12 +21,12 @@ function App() {
   return (
     <div className="App">
 
-      <header className="flex">
-        <h1>Scum &amp; Villainy<span className="light"> – the </span>Stable Orbit</h1>
+      <header className="flex mediaFlex">
+        <h1>Scum &amp; Villainy: <span className="light">the </span>Stable Orbit</h1>
         <p className="smallText shipDesc">Illicit Merchants, Smugglers, <br/>and Blockade Runners</p>
       </header>
 
-      <div className="flex wrapper">
+      <div className="flex mediaFlex wrapper">
         <Main main={mainData}/>
         <Aside aside={asideData}/>
       </div>

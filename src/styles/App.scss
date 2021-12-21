@@ -105,13 +105,13 @@ ul, li, select {
   padding: 0;
 }
 
-.radioButtons {
-  // justify-content: space-between;
-  width: 100%;
-  input {
-    margin-left: 5px;
-  }
-}
+// .radioButtons {
+//   // justify-content: space-between;
+//   width: 100%;
+//   input {
+//     margin-left: 5px;
+//   }
+// }
 
 li, .contacts, .upgrades {
   label {
@@ -126,12 +126,12 @@ input, select {
   border-bottom: 1px solid lightgray;
 }
 
-input[type="checkbox"] {
-  margin-right: 5px;
-}
-input[type="number"] {
-  color: red;
-}
+// input[type="checkbox"] {
+//   margin-right: 5px;
+// }
+// input[type="number"] {
+//   color: red;
+// }
 
 .bold {
   font-weight: 700;

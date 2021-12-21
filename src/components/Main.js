@@ -16,7 +16,7 @@ const Main = ({main}) => {
       <main>
 
         <section className="shipInfo">
-          <div className="flex">
+          <div className="flex mediaFlex">
             <TextField
               labelText="Designation"
               name="designation"

@@ -33,7 +33,7 @@
 
 .fillBox::after {
   /* use a CSS animation to 'fill' the fillBox */
-  background-color: yellow;
+  background-color: red;
   content: "";
   display: inline-block;
   /* remove when finished */
@@ -63,10 +63,10 @@
   }
 }
 
-.debt {
-  .fillBox::after {
-    background-color: red;
-  }
+.crew .fillBox::after,
+.upkeep .fillBox::after,
+.crewXP .fillBox::after {
+    background-color: yellow;
 }
 
 .gambits {

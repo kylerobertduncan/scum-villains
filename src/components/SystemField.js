@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import database from '../firebase';
 import { update, ref } from 'firebase/database';
-import SystemCount from './SystemCount';
+import SystemDamage from './SystemDamage';
 
 const SystemField = (props) => {
 
@@ -120,11 +120,16 @@ total the checked improvements for system count
       </div> */}
       { 
         system ?
-        <SystemCount
-          count={system?.max}
-          data={system?.count}
+        // <SystemCount
+        //   count={system?.max}
+        //   data={system?.count}
+        //   labelText={headerText}
+        //   name={system}
+        // />
+        <SystemDamage
+          dataPath={dataPath}
           labelText={headerText}
-          name={system}
+          systemData={system}
         />
         : null
       }

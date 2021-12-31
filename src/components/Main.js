@@ -72,7 +72,7 @@ const Main = ({main}) => {
             
             <section className="credDebt">
               <NumberField
-                count={4}
+                count={8}
                 dataPath='/main'
                 labelText="Cred"
                 name="cred"
@@ -104,21 +104,25 @@ const Main = ({main}) => {
               system={main.engines}
               dataPath="engines"
               headerText="Engines"
+              data={main}
             />
             <SystemField
               system={main.hull}
               dataPath="hull"
               headerText="Hull"
+              data={main}
             />
             <SystemField
               system={main.comms}
               dataPath="comms"
               headerText="Comms"
+              data={main}
             />
             <SystemField
               system={main.weapons}
               dataPath="weapons"
               headerText="Weapons"
+              data={main}
             />
           {/* </div> */}
 

@@ -72,7 +72,7 @@ const Main = ({main}) => {
             
             <section className="credDebt">
               <NumberField
-                count={8}
+                count={4}
                 dataPath='/main'
                 labelText="Cred"
                 name="cred"

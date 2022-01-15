@@ -30,7 +30,86 @@ const SystemDamage = (props) => {
     }
   }
 
-  if (systemData.max === 4) {
+  if (systemData.max === 2) {
+    return (
+      <div className={`name flex radioButtons`}>
+        <h3>{labelText}</h3>
+        <div className="fillBoxDiv">
+          <input
+            checked={systemData.damage === 1}
+            className={systemData.damage >= 1 ? "filled" : null}
+            id={`${dataPath}1`}
+            name={dataPath}
+            onChange={handleChange}
+            onClick={handleClick}
+            type="radio"
+            value={1}
+          />
+          <label className="fillBox" htmlFor={`${dataPath}1`}></label>
+        </div>
+        <div className="fillBoxDiv">
+          <input
+            checked={systemData.damage === 2}
+            className={systemData.damage >= 2 ? "filled" : null}
+            id={`${dataPath}2`}
+            name={dataPath}
+            onChange={handleChange}
+            onClick={handleClick}
+            type="radio"
+            value={2}
+          />
+          <label className="fillBox" htmlFor={`${dataPath}2`}></label>
+        </div>
+      </div>
+    )
+
+  } else if (systemData.max === 3) {
+    return (
+      <div className={`name flex radioButtons`}>
+        <h3>{labelText}</h3>
+        <div className="fillBoxDiv">
+          <input
+            checked={systemData.damage === 1}
+            className={systemData.damage >= 1 ? "filled" : null}
+            id={`${dataPath}1`}
+            name={dataPath}
+            onChange={handleChange}
+            onClick={handleClick}
+            type="radio"
+            value={1}
+          />
+          <label className="fillBox" htmlFor={`${dataPath}1`}></label>
+        </div>
+        <div className="fillBoxDiv">
+          <input
+            checked={systemData.damage === 2}
+            className={systemData.damage >= 2 ? "filled" : null}
+            id={`${dataPath}2`}
+            name={dataPath}
+            onChange={handleChange}
+            onClick={handleClick}
+            type="radio"
+            value={2}
+          />
+          <label className="fillBox" htmlFor={`${dataPath}2`}></label>
+        </div>
+        <div className="fillBoxDiv">
+          <input
+            checked={systemData.damage === 3}
+            className={systemData.damage >= 3 ? "filled" : null}
+            id={`${dataPath}3`}
+            name={dataPath}
+            onChange={handleChange}
+            onClick={handleClick}
+            type="radio"
+            value={3}
+          />
+          <label className="fillBox" htmlFor={`${dataPath}3`}></label>
+        </div>
+      </div>
+    )
+
+  } else if (systemData.max === 4) {
     return(
       <div className={`name flex radioButtons`}>
         <h3>{labelText}</h3>
